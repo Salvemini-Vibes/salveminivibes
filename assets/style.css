@@ -3,6 +3,37 @@
     src: url(fonts/COPYRIGHT-KLIM-TYPE-FOUNDRY-NOT-LICENSED-FOR-DESKTOP-USE-6.TTF);
 }
 
+@font-face {
+    font-family: DMSans-normal;;
+    src: url(fonts/DMSANS-REGULAR.TTF);
+}
+
+@font-face {
+    font-family: DMSans-bold;;
+    src: url(fonts/DMSANS-BOLD.TTF);
+}
+
+@font-face {
+    font-family: DMSans-medium;;
+    src: url(fonts/DMSANS-MEDIUM.TTF);
+}
+
+@font-face {
+    font-family: DMSans-boldit;;
+    src: url(fonts/DMSANS-BOLDITALIC.TTF);
+}
+
+@font-face {
+    font-family: DMSans-boldit;;
+    src: url(fonts/DMSANS-BOLD.TTF);
+}
+
+@font-face {
+    font-family: DMSans-bold;;
+    src: url(fonts/DMSANS-BOLD.TTF);
+}
+
+
 body {
     font-family: DM Sans, sans-serif;
     margin: 0;
@@ -56,7 +87,6 @@ nav{
     background: rgb(80,51,0);
     background: radial-gradient(circle, rgba(80,51,0,1) 0%, rgba(148,49,0,0.8827906162464986) 37%, rgba(178,89,0,0.7483368347338936) 56%, rgba(228,199,0,0) 85%);
     background-size: cover; /* Imposta la dimensione dell'immagine di sfondo in modo che copra l'intero elemento */
-
     background-attachment: fixed; /* Fissa l'immagine di sfondo, in modo che rimanga fissa quando si scorre la pagina */
 }
 
@@ -80,7 +110,7 @@ nav {
     color: black;
     border-radius: 10px;
     padding-right: 20px;
-    padding-left: 20px;
+    padding-left: 15px;
     margin: 0 auto;
     backdrop-filter: blur(10px); /* Effetto blur */
     z-index:1;
@@ -91,16 +121,20 @@ nav a {
     font-weight: bold;
     text-align: right;
     text-decoration: none;
-    margin-top: 1.85%;
-    border-radius: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-top: 1.5%;
+    border-radius: 6px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 1.30%;
+    padding:10px;
     transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: var(--sb-thumb-color);
-    color: #000000;
+    backdrop-filter: blur(50px); /* Effetto blur */
+    background-color: #06070896;
+    transition: background-color 0.1s ease;
+    color: #ffffff;
 }
 
 nav img{
@@ -181,7 +215,7 @@ svg:hover {
 }
 .welcome-message-subtext {
     text-align: left;
-    font-family: DM-Sans;
+    font-family: DMSans-medium;
     margin: 0 auto;
     margin-left: 10.5%;
     margin-top: -15%;
