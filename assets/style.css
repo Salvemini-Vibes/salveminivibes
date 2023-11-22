@@ -1,0 +1,364 @@
+@font-face {
+    font-family: Klim-Type;;
+    src: url(fonts/COPYRIGHT-KLIM-TYPE-FOUNDRY-NOT-LICENSED-FOR-DESKTOP-USE-6.TTF);
+}
+
+body {
+    font-family: DM Sans, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    background-color: #060708;
+    --sb-track-color: #060708;
+    --sb-thumb-color: #ffc148;
+    --sb-size: 11px;
+  
+    scrollbar-color: var(--sb-thumb-color) 
+                     var(--sb-track-color);
+               
+}
+
+body::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 35px;
+    border: 3px solid #060708;
+  }
+
+.hd-image {
+    position: fixed;
+    margin-top: -90%;
+    margin-left: -15%;
+    z-index: -1;
+}
+
+#fixed{
+    position:fixed;
+    display: none;
+    bottom:3%;
+    right:2%;
+}
+
+header{
+    display:block;
+}
+
+nav{
+    background-position: center;
+    background: rgb(80,51,0);
+    background: radial-gradient(circle, rgba(80,51,0,1) 0%, rgba(148,49,0,0.8827906162464986) 37%, rgba(178,89,0,0.7483368347338936) 56%, rgba(228,199,0,0) 85%);
+    background-size: cover; /* Imposta la dimensione dell'immagine di sfondo in modo che copra l'intero elemento */
+
+    background-attachment: fixed; /* Fissa l'immagine di sfondo, in modo che rimanga fissa quando si scorre la pagina */
+}
+
+nav {
+    
+    text-align: center;
+    align-content: center;
+    margin: 0 auto;
+    align-items: right;
+    position: fixed;
+    top: 2%;
+    word-break: normal;
+    bottom: auto;
+    left: 1%;
+    right: 1%;
+    outline: 4px solid #393e43;
+    display:flex;
+    justify-content: space-between;
+    background-color: rgba(87, 87, 87, 0.116); /* Colore di sfondo semi trasparente */
+    padding: 5px 0;
+    color: black;
+    border-radius: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px); /* Effetto blur */
+    z-index:1;
+}
+
+nav a {
+    color: rgb(243, 243, 243);
+    font-weight: bold;
+    text-align: right;
+    text-decoration: none;
+    margin-top: 1.85%;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--sb-thumb-color);
+    color: #000000;
+}
+
+nav img{
+    height: 90px;
+    width: auto;
+    
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+}
+
+svg{
+    fill: white;
+}
+svg:hover {
+    fill: black;
+}
+
+/***FOOTER**/
+
+.footer {
+  position: fixed;
+  left: 8%;
+  right: 8%;
+  bottom: 2%;
+  word-break: normal;
+  outline: 4px solid #393e43;
+  display:flex;
+  background-color: rgba(87, 87, 87, 0.116); /* Colore di sfondo semi trasparente */
+  padding: 5px 0;
+  color: white;
+  border-radius: 10px;
+  padding-right: 20px;
+  padding-left: 6.6%;
+  margin: 0 auto;
+  backdrop-filter: blur(10px); /* Effetto blur */
+  text-align:center;
+}
+
+
+.trace{
+  margin-bottom:18%;
+}
+
+.footer-social{
+    width: 5px;
+    height: auto;
+    margin-left:230%;
+    margin-top:-40%;
+    margin-bottom: -12%;
+}
+
+.footer-content{
+    display:block;
+}
+
+
+
+/* Aggiungi una classe specifica al footer quando si supera il punto desiderato */
+.footer.expanded {
+  height: 100px; /* Altezza desiderata quando il footer è espanso */
+}
+
+
+
+.welcome-message {
+    text-align: left;
+    padding: 10px;
+    margin: 10%;
+    font-family: Klim-Type;
+    font-size: 75px;
+}
+.welcome-message-subtext {
+    text-align: left;
+    font-family: DM-Sans;
+    margin: 0 auto;
+    margin-left: 10.5%;
+    margin-top: -15%;
+    font-size: 20px;
+}
+
+.hide { display:none; }
+
+.livetwitch{
+    margin-left: 1900px;
+    margin-right: 30%;
+    margin-bottom: 2%;
+    top: 15%;
+    word-break: normal;
+    outline: 4px solid #393e43;
+    display:flex;
+    background-color: rgba(87, 87, 87, 0.116); /* Colore di sfondo semi trasparente */
+    padding: 5px 0;
+    color: white;
+    border-radius: 10px;
+    padding-right: 20px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px); /* Effetto blur */
+    text-align:center;
+    z-index:0;
+  }
+
+.twitchplayer{
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    width: 30%;
+    height: 10%;
+    border-radius: 10px;
+    border: 2px solid #ffc148;
+    box-shadow: 0px 0px 10px 0px #ffc148;
+    z-index:-2;
+}
+
+/* Optional: The following css just makes sure the twitch video stays responsive */
+#twitch {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  border-radius: 20px;
+}
+#twitch object, #twitch iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+#loading-container {
+    text-align: center;
+}
+
+#loading-logo {
+    max-width: auto; /* Imposta la larghezza massima del tuo logo */
+    height: auto;
+    margin-top: 10%;
+    opacity: 0;
+}
+
+#loading-spinner {
+    border: 8px solid var(--sb-thumb-color);
+    border-radius: 50%;
+    border-top: 8px solid rgba(68, 68, 68, 0.7);
+    width: 50px;
+    height: 50px;
+    align-self: center;
+    margin-left: 48%;
+    margin-right:auto;
+    animation: spin 0.5s linear infinite;
+    margin-top: 20px;
+}
+
+#loading-text {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    nav {
+        align-items: center;
+        position: fixed;
+        top: 2%;
+        bottom: auto;
+        left: 5%;
+        right: 5%;
+        outline: 4px solid #393e43;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(87, 87, 87, 0.116); /* Colore di sfondo semi trasparente */
+        padding: 10px 0;
+        color: black;
+        border-radius: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin: 0 auto;
+        backdrop-filter: blur(10px);
+      }
+      nav a {
+    color: rgb(243, 243, 243);
+    font-weight: bold;
+    text-align: right;
+    text-decoration: none;
+    padding: 4%;
+    border-radius: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    transition: background-color 0.3s ease;
+        }
+
+.welcome-message {
+  text-align: center;
+  padding: 10px;
+  margin: 10%;
+  margin-top: 40%;
+  font-family: Klim-Type;
+  font-size: 70px;
+}
+.welcome-message-subtext {
+  text-align: center;
+  font-family: DM-Sans;
+  margin: 0 auto;
+  margin: 10%;
+  margin-top: -20%;
+  font-size: 20px;
+}
+
+.footer {
+  position: fixed;
+  left: 5%;
+  right: 5%;
+  bottom: 2%;
+  text-align: center;
+  align-content: center;
+  align-items: right;
+  word-break: normal;
+  outline: 4px solid #393e43;
+  display:flex;
+  justify-content: space-between;
+  background-color: rgba(87, 87, 87, 0.116); /* Colore di sfondo semi trasparente */
+  padding: 5px 0;
+  color: white;
+  border-radius: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 0 auto;
+  backdrop-filter: blur(10px); /* Effetto blur */
+}
+
+}
