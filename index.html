@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/magic.css">
+    <script src="assets/main.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>La Nostra Radio</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+</head>
+<body>
+
+
+    <!-- Pagina di caricamento -->
+    <div id="loading-container">
+        <img id="loading-logo" src="assets/img/logo.png" class="img-logo">
+        <div id="loading-spinner"></div>
+        <p id="loading-text">Caricamento...</p>
+        <!--<embed src="/assets/station.mp3" loop="none" autostart="true" width="2" height="0"> -->
+
+    </div>
+    <!--Fine caricamento-->
+
+    <div id="main-content" style="display: none;" class="animation-body-aft">
+    <header>
+            <nav>
+                <img src="assets/img/logo.png" class="img-logo">
+                    <a href="https://www.salveminialessano.edu.it/" target="_blank">Salvemini Vibes
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_167_2)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.377 0 0 5.377 0 12C0 18.623 5.377 24 12 24C18.623 24 24 18.623 24 12C24 5.377 18.623 0 12 0ZM12 1C5.929 1 1 5.929 1 12C1 18.071 5.929 23 12 23C18.071 23 23 18.071 23 12C23 5.929 18.071 1 12 1ZM16.828 12.5L12.22 16.263L12.899 17L19 12L12.888 7L12.222 7.753L16.826 11.5H5V12.5H16.828Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_167_2">
+                        <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                    </a>
+                    <a href="https://www.salveminialessano.edu.it/" target="_blank" style="margin-left: 10px;">Palinsesto
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_167_2)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.377 0 0 5.377 0 12C0 18.623 5.377 24 12 24C18.623 24 24 18.623 24 12C24 5.377 18.623 0 12 0ZM12 1C5.929 1 1 5.929 1 12C1 18.071 5.929 23 12 23C18.071 23 23 18.071 23 12C23 5.929 18.071 1 12 1ZM16.828 12.5L12.22 16.263L12.899 17L19 12L12.888 7L12.222 7.753L16.826 11.5H5V12.5H16.828Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_167_2">
+                            <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                        </a></a>
+                    <a href="https://www.salveminialessano.edu.it/" target="_blank" style="margin-left: 10px;">Dove Ascoltarci
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_167_2)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.377 0 0 5.377 0 12C0 18.623 5.377 24 12 24C18.623 24 24 18.623 24 12C24 5.377 18.623 0 12 0ZM12 1C5.929 1 1 5.929 1 12C1 18.071 5.929 23 12 23C18.071 23 23 18.071 23 12C23 5.929 18.071 1 12 1ZM16.828 12.5L12.22 16.263L12.899 17L19 12L12.888 7L12.222 7.753L16.826 11.5H5V12.5H16.828Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_167_2">
+                            <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                        </a>
+                    <a href="https://www.salveminialessano.edu.it/" target="_blank" style="margin-left: 10px;">I Nostri Speaker
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_167_2)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.377 0 0 5.377 0 12C0 18.623 5.377 24 12 24C18.623 24 24 18.623 24 12C24 5.377 18.623 0 12 0ZM12 1C5.929 1 1 5.929 1 12C1 18.071 5.929 23 12 23C18.071 23 23 18.071 23 12C23 5.929 18.071 1 12 1ZM16.828 12.5L12.22 16.263L12.899 17L19 12L12.888 7L12.222 7.753L16.826 11.5H5V12.5H16.828Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_167_2">
+                            <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                        </a>    
+                    <a href="https://www.salveminialessano.edu.it/" target="_blank" style="margin-left: 10px;">La Nostra Scuola
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_167_2)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.377 0 0 5.377 0 12C0 18.623 5.377 24 12 24C18.623 24 24 18.623 24 12C24 5.377 18.623 0 12 0ZM12 1C5.929 1 1 5.929 1 12C1 18.071 5.929 23 12 23C18.071 23 23 18.071 23 12C23 5.929 18.071 1 12 1ZM16.828 12.5L12.22 16.263L12.899 17L19 12L12.888 7L12.222 7.753L16.826 11.5H5V12.5H16.828Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_167_2">
+                            <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                        </a>
+            </nav>
+    </header>
+
+    <div class="livetwitch">
+
+    </div>
+    
+
+        <div class="welcome-message animated"><h2>SALVEMINI VIBES</h2></div>
+        <div class="welcome-message-subtext animated"><p>Grazie per essere qui e condividere la nostra passione per la radio.</div></p>
+        <div class="welcome-message animated"><h2>SALVEMINI VIBES</h2></div>
+        <div class="welcome-message-subtext animated"><p>Grazie per essere qui e condividere la nostra passione per la radio.</div></p>
+        <div class="welcome-message animated"><h2>SALVEMINI VIBES</h2></div>
+        <div class="welcome-message-subtext animated"><p>Grazie per essere qui e condividere la nostra passione per la radio.</div></p>
+        <div class="welcome-message animated"><h2>SALVEMINI VIBES</h2></div>
+        <div class="welcome-message-subtext animated"><p>Grazie per essere qui e condividere la nostra passione per la radio.</div></p>
+        
+ 
+
+
+
+  
+
+        <div class="welcome-message animated"><h2>SALVEMINI VIBES</h2></div>
+        <div class="welcome-message-subtext animated"><p>Grazie per essere qui e condividere la nostra passione per la radio.</div></p>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-main">
+                <div class="footer-content">
+                    <p>Salvemini Vibes&copy</p>
+                </div>
+            </div>
+        </div>
+    </footer>    
+        
+
+
+    <script type="text/javascript">
+      var options = {
+        channel: "pow3r", // TODO: Change this to the streams username you want to embed
+        width: 1920,
+        height: 1080,
+      };
+      var player = new Twitch.Player("twitch", options);
+  
+      player.addEventListener(Twitch.Player.READY, initiate)
+  
+      function initiate() {
+        player.addEventListener(Twitch.Player.ONLINE, handleOnline);
+        player.addEventListener(Twitch.Player.OFFLINE, handleOffline);
+        player.removeEventListener(Twitch.Player.READY, initiate);
+      }
+  
+      function handleOnline() {
+        document.getElementById("twitch").classList.remove('hide');
+        player.removeEventListener(Twitch.Player.ONLINE, handleOnline);
+        player.addEventListener(Twitch.Player.OFFLINE, handleOffline);
+        player.setMuted(false);
+      }
+  
+      function handleOffline() {
+        document.getElementById("twitch").classList.add('hide');
+        player.removeEventListener(Twitch.Player.OFFLINE, handleOffline);
+        player.addEventListener(Twitch.Player.ONLINE, handleOnline);
+        player.setMuted(true);
+      }
+    </script>
+    <script>
+        // Simula il caricamento, ad esempio aspettando 3 secondi
+        setTimeout(function () {
+            // Dopo il caricamento, nascondi la pagina di caricamento e mostra il contenuto principale
+            document.getElementById('loading-container').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        }, 200); // Imposta il tempo desiderato in millisecondi
+    </script>
+    <script>
+        function logoloading() {
+       const selector = document.querySelector('.img-logo' , '.animation-body-aft')
+       selector.classList.add('magictime' , 'vanishIn')
+        }
+        setInterval(logoloading, 1000);
+    </script>
+    <script>
+            $(document).ready(function () {
+                // Funzione per verificare lo stato di live streaming su Twitch
+                function checkTwitchLive() {
+                    // Effettua una chiamata all'API di Twitch per ottenere lo stato di live streaming
+                    // Sostituisci 'NOME_CANALE' con il tuo nome di canale su Twitch
+                    $.getJSON('https://api.twitch.tv/helix/streams?user_login=therealmarzaa&first=1', function (data) {
+                        if (data.data.length > 0) {
+                            // Se il canale è in live, mostra il blocco
+                            $(".liveBlock").show();
+                        }
+                    });
+                }
+        
+                // Puoi aggiungere funzioni simili per altre piattaforme come YouTube, Instagram, etc.
+        
+                // Esempio per Twitch
+                checkTwitchLive();
+            });
+        </script>
+</body>
+</html>
