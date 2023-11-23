@@ -42,7 +42,7 @@
             </nav>
     </header>
 
-    <div class="livetwitch">
+    <div class="livetwitch" id="livefr">
         <div id="twitch" class="hide twitchplayer">
         </div>
         <div class="indiretta text-tw"><div class="circle"></div>IN DIRETTA ORA</div>
@@ -136,7 +136,7 @@
                     $.getJSON('https://api.twitch.tv/helix/streams?user_login=salvemini_vibes&first=1', function (data) {
                         if (data.data.length > 0) {
                             // Se il canale è in live, mostra il blocco
-                            $(".livetwitch").show();
+                            $('livefr').show();
                         }
                     });
                 }
