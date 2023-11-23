@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/magic.css">
     <script src="assets/main.js"></script>
+    <script src="assets/script.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>La Nostra Radio</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -27,7 +28,7 @@
     <!--Fine caricamento-->
 
     <div id="main-content" style="display: none;" class="animation-body-aft">
-    <header>
+        <header>
             <nav>
                 <img src="assets/img/logo.png" class="img-logo">
                     <a href="https://www.salveminialessano.edu.it/" target="_blank">Salvemini Vibes
@@ -46,31 +47,22 @@
             </nav>
     </header>
 
-    <div style="display: none;">
-    <div class="livetwitch hide" id="livefr">
+    <div class="livetwitch2v" id="livefr">
         <div id="twitch" class="hide twitchplayer">
         </div>
-        <div class="indiretta text-tw"><div class="circle"></div>IN DIRETTA ORA</div>
-    </div>
     </div>
 
-        <div class="welcome-message animated"><h2>SALVEMINI VIBES</h2></div>
-        <div class="welcome-message-subtext animated"><p>Grazie per essere qui e condividere la nostra passione per la radio.</div></p>
-        <div class="welcome-message animated"><h2>SALVEMINI VIBES</h2></div>
-        <div class="welcome-message-subtext animated"><p>Grazie per essere qui e condividere la nostra passione per la radio.</div></p>
-        <div class="welcome-message animated"><h2>SALVEMINI VIBES</h2></div>
-        <div class="welcome-message-subtext animated"><p>Grazie per essere qui e condividere la nostra passione per la radio.</div></p>
-        <div class="welcome-message animated"><h2>SALVEMINI VIBES</h2></div>
-        <div class="welcome-message-subtext animated"><p>Grazie per essere qui e condividere la nostra passione per la radio.</div></p>
-        
- 
+    <div class="info-diretta">
+        <div class="info-title">
+            <p>La nostra radio</p>
+        </div>
+    </div>
+
+    <div id="carousel-container">
+        <div id="carousel"></div>
+    </div>
 
 
-
-  
-
-        <div class="welcome-message animated"><h2>SALVEMINI VIBES</h2></div>
-        <div class="welcome-message-subtext animated"><p>Grazie per essere qui e condividere la nostra passione per la radio.</div></p>
 
 
     <footer>
@@ -82,8 +74,7 @@
             </div>
         </div>
     </footer>    
-        
-
     <script src="assets/script.js"></script>
+
 </body>
 </html>
