@@ -92,7 +92,7 @@ nav{
 
 nav {
     
-    text-align: center;
+    text-align: right;
     align-content: center;
     margin: 0 auto;
     align-items: right;
@@ -111,7 +111,6 @@ nav {
     border-radius: 10px;
     padding-right: 20px;
     padding-left: 15px;
-    margin: 0 auto;
     backdrop-filter: blur(10px); /* Effetto blur */
     z-index:1;
 }
@@ -121,42 +120,29 @@ nav a {
     font-weight: bold;
     text-align: right;
     text-decoration: none;
-    margin-top: 1.5%;
+    margin-top: 1.0%;
     border-radius: 6px;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-bottom: 1.30%;
-    padding:10px;
-    transition: background-color 0.3s ease;
+    margin-bottom: 1.0%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    border: 2px #fff;
 }
 
 nav a:hover {
     backdrop-filter: blur(50px); /* Effetto blur */
-    background-color: #06070896;
-    transition: background-color 0.1s ease;
+    background-color: #4d596100;
+    outline: solid 2px rgba(224, 224, 224, 0.61);
+    transition: backdrop-filter 0.3s ease-in;
+    background-blend-mode:color-burn;
     color: #ffffff;
 }
 
 nav img{
-    height: 90px;
+    height: 70px;
     width: auto;
     
-}
-
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24;
-}
-
-svg{
-    fill: white;
-}
-svg:hover {
-    fill: black;
 }
 
 /***FOOTER**/
@@ -225,44 +211,138 @@ svg:hover {
 .hide { display:none; }
 
 .livetwitch{
-    margin-left: 1900px;
-    margin-right: 30%;
-    margin-bottom: 2%;
-    top: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: -5%;
+    margin-top: 8.5%;
     word-break: normal;
-    outline: 4px solid #393e43;
+    outline: 4px solid #e0e0e0;
+    box-shadow: 0px 0px 40px 0px #c9c9c973;
     display:flex;
     background-color: rgba(87, 87, 87, 0.116); /* Colore di sfondo semi trasparente */
-    padding: 5px 0;
+    padding: 35px 0;
     color: white;
     border-radius: 10px;
     padding-right: 20px;
-    margin: 0 auto;
     backdrop-filter: blur(10px); /* Effetto blur */
     text-align:center;
-    z-index:0;
+    z-index:-3;
   }
 
 .twitchplayer{
-    margin-top: 10%;
+    align-items: center;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 10%;
-    width: 30%;
-    height: 10%;
-    border-radius: 10px;
-    border: 2px solid #ffc148;
+    margin-bottom: 1%;
+    border-radius: 20px;
+    border: 2px solid #e7e7e7;
     box-shadow: 0px 0px 10px 0px #ffc148;
     z-index:-2;
+    width: 76%;
+    height: 76%;
+}
+
+.text-tw{
+    font-family: DMSans-bold;
+    font-size: 15px;
+    padding-top:8px;
+    padding-left:8px;
+    padding-right:8px;
+    padding-bottom:-15px;
+    margin-top: 1%;
+    margin-left: 4%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    color: red;
+    text-align: right;
+    z-index: 2;
+
+}
+
+.circle {
+    position: absolute;
+    left: 3%;
+    top: 6.5%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 15px;
+    height: 15px;
+  
+    &:before {
+      content: "";
+      position: relative;
+      display: block;
+      width: 250%;
+      height: 250%;
+      box-sizing: border-box;
+      margin-left: -75%;
+      margin-top: -75%;
+      border-radius: 45px;
+      background-color: #ca0000;
+      animation: pulse 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    }
+  
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: #f31010;
+      border-radius: 50px;
+      animation: circle 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.33);
+    }
+    80%,
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes circle {
+    0% {
+      transform: scale(0.8);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.8);
+    }
+  }
+  
+.indiretta{
+    height: 30px;
+    width: 160px;
+    background-color: #fff;
+    margin-left: -95%;
+    margin-top: -1%;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+
+.img-player-twitch{
+    position: absolute;
+    width: fit-content;
+    height: auto;
+    padding-bottom: 0; /* 16:9 */
+    backdrop-filter: blur(10px); /* Effetto blur */
 }
 
 /* Optional: The following css just makes sure the twitch video stays responsive */
 #twitch {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  padding-top: 25px;
-  height: 0;
-  border-radius: 20px;
+  position:unset;
+  padding-bottom: 32.5%; /* 16:9 */
+  padding-top: 10px;
+  height: 0; 
+  border-radius: 10px;
 }
 #twitch object, #twitch iframe {
   position: absolute;
@@ -270,7 +350,7 @@ svg:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 #loading-container {
