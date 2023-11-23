@@ -1,0 +1,44 @@
+{
+    "people": [
+        {
+            "name": "Persona 1",
+            "role": "Ruolo 1",
+            "image": "/img/header/maskgroup.png"
+        },
+        {
+            "name": "Persona 2",
+            "role": "Ruolo 2",
+            "image": "/img/header/maskgroup.png"
+        },
+        {
+            "name": "Persona 3",
+            "role": "Ruolo 3",
+            "image": "/img/header/maskgroup.png"
+        },
+        {
+            "name": "Persona 4",
+            "role": "Ruolo 4",
+            "image": "/img/header/maskgroup.png"
+        },
+        {
+            "name": "Persona 5",
+            "role": "Ruolo 5",
+            "image": "/img/header/maskgroup.png"
+        },
+        {
+            "name": "Persona 6",
+            "role": "Ruolo 6",
+            "image": "path/to/image6.jpg"
+        },
+        {
+            "name": "Persona 7",
+            "role": "Ruolo 7",
+            "image": "path/to/image7.jpg"
+        },
+        {
+            "name": "Persona 8",
+            "role": "Ruolo 8",
+            "image": "path/to/image8.jpg"
+        }
+    ]
+}
