@@ -133,10 +133,10 @@
                 function checkTwitchLive() {
                     // Effettua una chiamata all'API di Twitch per ottenere lo stato di live streaming
                     // Sostituisci 'NOME_CANALE' con il tuo nome di canale su Twitch
-                    $.getJSON('https://api.twitch.tv/helix/streams?user_login=therealmarzaa&first=1', function (data) {
+                    $.getJSON('https://api.twitch.tv/helix/streams?user_login=salvemini_vibes&first=1', function (data) {
                         if (data.data.length > 0) {
                             // Se il canale è in live, mostra il blocco
-                            $(".liveBlock").show();
+                            $(".livetwitch").show();
                         }
                     });
                 }
