@@ -35,7 +35,7 @@ function createPersonElement(person) {
 // CHECKSTATUS
 
 var options = {
-    channel: "chilledcat_music", // TODO: Change this to the streams username you want to embed
+    channel: "tayson", // TODO: Change this to the streams username you want to embed
     width: 1920,
     height: 1080,
     controls: false,
@@ -55,6 +55,7 @@ var options = {
     player.removeEventListener(Twitch.Player.ONLINE, handleOnline);
     player.addEventListener(Twitch.Player.OFFLINE, handleOffline);
     player.setMuted(true);
+    document.getElementById('offlinedataimg').style.display = 'none'; 
   }
 
   function handleOffline() {
@@ -66,13 +67,18 @@ var options = {
   player.setVolume(0.5);
 
   // ANIMATION
-
+  function myFunction() {
+    const selector = document.querySelector('.main-content');
+    selector.classList.add('magictime', 'vanishIn');
+  }
 
              // Simula il caricamento, ad esempio aspettando 3 secondi
              setTimeout(function () {
                 // Dopo il caricamento, nascondi la pagina di caricamento e mostra il contenuto principale
                 document.getElementById('loading-container').style.display = 'none';
-                document.getElementById('main-content').style.display = 'block';
+                document.getElementById('main-content').style.display = 'block'; 
+
+
             }, 4000); // Imposta il tempo desiderato in millisecondi
 
     // COLORPALETTE-VIDEO
