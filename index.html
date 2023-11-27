@@ -21,7 +21,7 @@
             <div></div>
           </div>
         <p id="loading-text">Caricamento...</p>
-        <embed src="/assets/station.mp3" loop="none" autostart="true" width="2" height="0">
+        <!-- <embed src="/assets/station.mp3" loop="none" autostart="true" width="2" height="0">-->
 
     </div>
     <!--Fine caricamento-->
@@ -56,34 +56,87 @@
 
         <div class="welcome-message animated"><h2>SALVEMINI VIBES</h2></div>
         <div class="welcome-message-subtext animated"><p>Grazie per essere qui e condividere la nostra passione per la radio.</div></p>
-        <div class="welcome-message animated"><h2>SALVEMINI VIBES</h2></div>
-        <div class="welcome-message-subtext animated"><p>Grazie per essere qui e condividere la nostra passione per la radio.</div></p>
-        <div class="welcome-message animated"><h2>SALVEMINI VIBES</h2></div>
-        <div class="welcome-message-subtext animated"><p>Grazie per essere qui e condividere la nostra passione per la radio.</div></p>
-        <div class="welcome-message animated"><h2>SALVEMINI VIBES</h2></div>
-        <div class="welcome-message-subtext animated"><p>Grazie per essere qui e condividere la nostra passione per la radio.</div></p>
-        
+
+
  
 
-
-
-  
-
-        <div class="welcome-message animated"><h2>SALVEMINI VIBES</h2></div>
-        <div class="welcome-message-subtext animated"><p>Grazie per essere qui e condividere la nostra passione per la radio.</div></p>
-
-
-    <footer>
-        <div class="footer">
-            <div class="footer-main">
-                <div class="footer-content">
-                    <p>Salvemini Vibes&copy</p>
+        <div class="scroller" data-speed="slow">
+            <ul class="tag-list scroller__inner">
+              <li>CRISTIANO BLEVE&nbsp;  &nbsp;</li>
+              <li>BIAGIO BLEVE&nbsp;  &nbsp;</li>
+              <li>LUIGI VERARDO&nbsp;  &nbsp;</li>
+              <li>LUIGI MARTELLA&nbsp;  &nbsp;</li>
+              <li>FULVIO NUZZO&nbsp;  &nbsp;</li>
+              <li>RICCARDO AMOROSO&nbsp;  &nbsp;</li>
+              <li>DESIREE BRAMATO&nbsp;  &nbsp;</li>
+              <li>FATIMA CUCINELLI&nbsp;  &nbsp;</li>
+              <li>DANIELA FERSINO&nbsp;  &nbsp;</li>
+              <li>DALILA PORTONE&nbsp;  &nbsp;</li>
+              <li>MARICA FLORIO&nbsp;  &nbsp;</li>
+              <li>ANDREA GAGLIANI&nbsp;  &nbsp;</li>
+              <li>MARCO MORCIANO&nbsp;  &nbsp;</li>
+              <li>GIORGIA MARTINA&nbsp;  &nbsp;</li>
+            </ul>
+          </div>
+    
+        <footer>
+    
+        
+            <div class="socialbanner">
+                <div class="socialbanner-content">
+                    <div class="social-text1">SOCIAL</div>
+                    <div class="social-text2">Seguici su tutti i nostri social.<br>  Clicca sulle icone per essere reindirizzato sui nostri profili</div>
+                    <div class="social-icon">
+                        <div class="socialbtn-ig"><a href="https://www.instagram.com/salvemini.vibes/" target="_blank"><img src="assets/img/instagram.svg" class="social-icon"></a></div>
+                        <div class="socialbtn-fb"><a href="https://www.facebook.com/salveminivibes" target="_blank"><img src="assets/img/facebook.svg" class="social-icon"></a></div>
+                        <div class="socialbtn-tw"><a href="https://www.twitch.tv/salvemini_vibes" target="_blank"><img src="assets/img/Twitch.svg" class="social-icon"></a></div>
+                        <div class="socialbtn-yt"><a href="https://www.youtube.com/channel/UC9Qj8QOZ6tjQzKJXtX0Q4jQ" target="_blank"><img src="assets/img/youtube.svg" class="social-icon"></a></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    </div>
     
-    <script src="assets/script.js"></script>
-</body>
-</html>
+    
+            <div class="footer">
+                <div class="footer-main">
+                    <div class="footer-content">
+                        <p>Salvemini Vibes&copy</p>
+                    </div>
+                </div>
+            </div>
+        </footer>    
+    
+        <script>
+            const scrollers = document.querySelectorAll(".scroller");
+    
+    // If a user hasn't opted in for recuded motion, then we add the animation
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      addAnimation();
+    }
+    
+    function addAnimation() {
+      scrollers.forEach((scroller) => {
+        // add data-animated="true" to every `.scroller` on the page
+        scroller.setAttribute("data-animated", true);
+    
+        // Make an array from the elements within `.scroller-inner`
+        const scrollerInner = scroller.querySelector(".scroller__inner");
+        const scrollerContent = Array.from(scrollerInner.children);
+    
+        // For each item in the array, clone it
+        // add aria-hidden to it
+        // add it into the `.scroller-inner`
+        scrollerContent.forEach((item) => {
+          const duplicatedItem = item.cloneNode(true);
+          duplicatedItem.setAttribute("aria-hidden", true);
+          scrollerInner.appendChild(duplicatedItem);
+        });
+      });
+    }
+    
+        </script>
+    
+        <script src="assets/script.js"></script>
+    
+    </body>
+    </html>
+    

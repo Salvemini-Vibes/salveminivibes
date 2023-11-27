@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/magic.css">
+    <link rel="stylesheet" href="navbar/style.css">
     <script src="assets/main.js"></script>
     <script src="assets/script.js"></script>
     <script src="assets/data.json"></script>
@@ -31,26 +32,32 @@
     <!--Fine caricamento-->
 
     <div id="main-content" style="display: none;" class="animation-body-aft">
-        <header>
-            <nav>
+ <header>
+    <nav>
+    <img src="assets/img/logo.png" class="img-logo">
+        <div class="dropdown">
+            <a target="_blank" class="menu-butt">Menu</a>
+            <div class="dropdown-content">
+        <ul>
+            <li class="dropdown">
+            <a href="index.html" target="_blank" class="margin-left: 10px;">Salvemini Vibes
+            </a>
+            <a href="palinsesto.html" target="_blank" style="margin-left: 10px;">Palinsesto
+                </a>
+            <a href="doveascoltarci.html" target="_blank" style="margin-left: 10px;">Dove Ascoltarci
+                </a>
+            <a href="speaker.html" target="_blank" style="margin-left: 10px;">I Nostri Speaker
 
-
-                    <img src="assets/img/logo.png" class="img-logo">
-                        <a href="https://www.salveminialessano.edu.it/" target="_blank">Salvemini Vibes
-                        </a>
-                        <a href="https://www.salveminialessano.edu.it/" target="_blank" style="margin-left: 10px;">Palinsesto
-                            </a>
-                        <a href="https://www.salveminialessano.edu.it/" target="_blank" style="margin-left: 10px;">Dove Ascoltarci
-                            </a>
-                        <a href="https://www.salveminialessano.edu.it/" target="_blank" style="margin-left: 10px;">I Nostri Speaker
-
-                            </a>    
-                        <a href="diretta.html" target="_blank" style="margin-left: 10px;">Diretta
-                            </a>
-                        <a href="https://www.salveminialessano.edu.it/" target="_blank" style="margin-left: 10px;">La Nostra Scuola
-                            </a>
-
-            </nav>
+                </a>    
+            <a href="diretta.html" target="_blank" style="margin-left: 10px;">Diretta
+                </a>
+            <a href="lanostrascuola.html" target="_blank" style="margin-left: 10px;">La Nostra Scuola
+                </a>
+            </li>
+        </ul>
+            </div>
+            </div>
+</nav> 
     </header>
 
     <div class="livetwitch2v" id="livefr">
@@ -59,10 +66,9 @@
         <img id="offlinedataimg" class="offlinedataimg" data-twitch-channel="salvemini_vibes" data-offline-image="assets/img/twitch/offline3.gif">
     </div>
 
-    <div class="info-diretta">
-        <div class="info-title">
-            <p>La nostra radio</p>
-        </div>
+    <!--<div class="info-diretta">
+        <h1 class="info-title" id="infotitle"></h1>
+
     </div>
 
     <div id="carousel-container">
@@ -70,9 +76,45 @@
     </div>
 
 
+    -->
 
+
+    <div class="scroller" data-speed="slow">
+        <ul class="tag-list scroller__inner">
+          <li>CRISTIANO BLEVE&nbsp;  &nbsp;</li>
+          <li>BIAGIO BLEVE&nbsp;  &nbsp;</li>
+          <li>LUIGI VERARDO&nbsp;  &nbsp;</li>
+          <li>LUIGI MARTELLA&nbsp;  &nbsp;</li>
+          <li>FULVIO NUZZO&nbsp;  &nbsp;</li>
+          <li>RICCARDO AMOROSO&nbsp;  &nbsp;</li>
+          <li>DESIREE BRAMATO&nbsp;  &nbsp;</li>
+          <li>FATIMA CUCINELLI&nbsp;  &nbsp;</li>
+          <li>DANIELA FERSINO&nbsp;  &nbsp;</li>
+          <li>DALILA PORTONE&nbsp;  &nbsp;</li>
+          <li>MARICA FLORIO&nbsp;  &nbsp;</li>
+          <li>ANDREA GAGLIANI&nbsp;  &nbsp;</li>
+          <li>MARCO MORCIANO&nbsp;  &nbsp;</li>
+          <li>GIORGIA MARTINA&nbsp;  &nbsp;</li>
+        </ul>
+      </div>
 
     <footer>
+
+    
+        <div class="socialbanner">
+            <div class="socialbanner-content">
+                <div class="social-text1">SOCIAL</div>
+                <div class="social-text2">Seguici su tutti i nostri social.<br>  Clicca sulle icone per essere reindirizzato sui nostri profili</div>
+                <div class="social-icon">
+                    <div class="socialbtn-ig"><a href="https://www.instagram.com/salvemini.vibes/" target="_blank"><img src="assets/img/instagram.svg" class="social-icon"></a></div>
+                    <div class="socialbtn-fb"><a href="https://www.facebook.com/salveminivibes" target="_blank"><img src="assets/img/facebook.svg" class="social-icon"></a></div>
+                    <div class="socialbtn-tw"><a href="https://www.twitch.tv/salvemini_vibes" target="_blank"><img src="assets/img/Twitch.svg" class="social-icon"></a></div>
+                    <div class="socialbtn-yt"><a href="https://www.youtube.com/channel/UC9Qj8QOZ6tjQzKJXtX0Q4jQ" target="_blank"><img src="assets/img/youtube.svg" class="social-icon"></a></div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="footer">
             <div class="footer-main">
                 <div class="footer-content">
@@ -81,6 +123,37 @@
             </div>
         </div>
     </footer>    
+
+    <script>
+        const scrollers = document.querySelectorAll(".scroller");
+
+// If a user hasn't opted in for recuded motion, then we add the animation
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
+
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    // add data-animated="true" to every `.scroller` on the page
+    scroller.setAttribute("data-animated", true);
+
+    // Make an array from the elements within `.scroller-inner`
+    const scrollerInner = scroller.querySelector(".scroller__inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+
+    // For each item in the array, clone it
+    // add aria-hidden to it
+    // add it into the `.scroller-inner`
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+  });
+}
+
+    </script>
+
     <script src="assets/script.js"></script>
 
 </body>
