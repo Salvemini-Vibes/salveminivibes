@@ -35,7 +35,7 @@ function createPersonElement(person) {
 // CHECKSTATUS
 
 var options = {
-    channel: "tayson", // TODO: Change this to the streams username you want to embed
+    channel: "judypisyc", // TODO: Change this to the streams username you want to embed
     width: 1920,
     height: 1080,
     controls: false,
@@ -79,6 +79,35 @@ var options = {
                 document.getElementById('main-content').style.display = 'block'; 
 
 
-            }, 4000); // Imposta il tempo desiderato in millisecondi
+            }, 10); // Imposta il tempo desiderato in millisecondi
 
-    // COLORPALETTE-VIDEO
+    // TITOLO
+
+     var utente = "judypisyc";
+    function getTwitchStreamTitle() {
+      var apiUrl = 'https://api.twitch.tv/helix/streams?user_login=' + utente;
+
+      $.ajax({
+          url: apiUrl,
+          success: function (data) {
+              if (data.data.length > 0) {
+                  var twitchTitle = data.data[0].title;
+                  document.getElementById('infotitle').innerHTML = twitchTitle;
+              } else {
+                  document.getElementById('infotitle').innerHTML = 'Il canale non è in diretta';
+              }
+          },
+          error: function (error) {
+              console.error('Errore nella richiesta API Twitch:', error);
+          }
+      });
+  }
+
+  // Chiamata iniziale
+  getTwitchStreamTitle();
+
+  // Aggiorna ogni 5 minuti (300000 millisecondi)
+  setInterval(getTwitchStreamTitle, 300000);
+    
+//
+
